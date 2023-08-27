@@ -292,3 +292,9 @@ nav {
 .clear {
   clear: both;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
