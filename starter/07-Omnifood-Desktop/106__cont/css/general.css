@@ -57,6 +57,11 @@ Default: 8px
   padding: 0;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 html {
   /* font-size: 10px; */
   /* 10px / 16px = 0.625 = 62.5% */
@@ -145,6 +150,7 @@ body {
   padding: 0 3.2rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -155,8 +161,24 @@ body {
   font-weight: 600;
   display: inline-block;
 
+  /* Only required for button element */
+  font-family: inherit;
+  cursor: pointer;
+
   /* Put transition on original state */
   transition: background-color 0.3s;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555 !important;
 }
 
 .btn--full:link,
